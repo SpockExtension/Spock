@@ -1,0 +1,70 @@
+{
+  "name": "spocky",
+  "displayName": "Spocky",
+  "version": "0.0.1",
+  "description": "A basic Plasmo extension.",
+  "author": "abhinavmir",
+  "scripts": {
+    "dev": "plasmo dev",
+    "build": "plasmo build",
+    "package": "plasmo package",
+    "oracle": "node logic/cryptoOracle.js"
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.19",
+    "@chakra-ui/react": "^2.6.0",
+    "@emotion/react": "^11.10.8",
+    "@emotion/styled": "^11.10.8",
+    "@plasmohq/storage": "^1.5.0",
+    "atoms": "^0.2.0",
+    "atoms-react": "^1.0.8",
+    "axios": "^1.4.0",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.3",
+    "elliptic": "^6.5.4",
+    "express": "^4.18.2",
+    "file-saver": "^2.0.5",
+    "firebase": "^9.21.0",
+    "framer-motion": "^4.1.17",
+    "fs-react": "^0.0.4",
+    "jotai": "^2.0.4",
+    "jsonwebtoken": "^9.0.0",
+    "pg": "^8.10.0",
+    "pg-native": "^3.0.1",
+    "plasmo": "0.67.3",
+    "postgresql-client": "^2.5.5",
+    "react": "18.2.0",
+    "react-cookie": "^4.1.1",
+    "react-dom": "18.2.0",
+    "react-file-reader": "^1.1.4",
+    "react-hook-form": "^7.43.9",
+    "react-icons": "^4.8.0",
+    "react-router-dom": "^6.10.0",
+    "ssh2": "^1.11.0",
+    "supertest": "^6.3.3",
+    "tweetnacl": "^1.0.3",
+    "tweetnacl-util": "^0.15.1"
+  },
+  "devDependencies": {
+    "@plasmohq/prettier-plugin-sort-imports": "3.6.3",
+    "@types/chrome": "0.0.210",
+    "@types/node": "18.11.18",
+    "@types/react": "18.0.27",
+    "@types/react-dom": "18.0.10",
+    "any-text": "^1.2.0",
+    "prettier": "2.8.3",
+    "typescript": "4.9.4"
+  },
+  "manifest": {
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "permissions": [
+      "storage",
+      "activeTab",
+      "tabs",
+      "cookies",
+      "unlimitedStorage"
+    ]
+  }
+}
