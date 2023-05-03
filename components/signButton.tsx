@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAtom } from 'jotai';
 import { keyPairDefaultAtom, keyPairsAtom } from '../logic/Atoms';
-import { signMessage } from '~logic/genKeyPair';
+import { signMessage, get_random_nonce } from '~logic/genKeyPair';
 import type DefaultKeyPair from './panelDisplay';
 import { Button, ButtonProps, chakra } from '@chakra-ui/react';
 
@@ -25,6 +25,8 @@ function MyComponent() {
     const keyPairsVar = keyPairs[keyPairDefault];
     const privKey = keyPairsVar.privKey;
     const username = keyPairDefault;
+    const random_nonce = get_random_nonce();
+    payload = payload+random_nonce;
     const signature = signMessage(privKey, JSON.stringify(payload));
     return JSON.stringify({
       username,

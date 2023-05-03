@@ -30,6 +30,17 @@ async function validateMessage(message, signature, publicKey) {
   }
 }
 
+async function get_random_nonce() {
+  const url = `${base_uri}/nonce`;
+  try {
+    const response = await axios.get(url);
+    return response.data.nonce;
+  } catch (error) {
+    console.error(error);
+    return false;
+  }
+}
+
 async function signAndValidateMessage(message, privateKey, pubKey) {
   const signature = await signMessage(message, privateKey);
   return validateMessage(message, signature, pubKey);
@@ -41,23 +52,11 @@ function derivePubKey(privateKey) {
   return key.getPublic().encode('hex');
 }
 
-// generateECDSAKeyPair().then(keyPair => {
-//   const private = "add33c663a934479e5f7af2f678b18d303fc30f82b45096d4cfae37811c3b41"
-//   const publicKey = derivePubKey(private);
-//   const message = 'Hello world!';
-//   signMessage(message, privateKey).then(signature => {
-//     console.log(`Signature: ${signature}`);
-//     validateMessage(message, signature, publicKey).then(isValid => {
-//       console.log(`Is valid: ${isValid}`);
-//     });
-//   } );
-// });
-
-
 module.exports = {
   generateECDSAKeyPair,
   signMessage,
   validateMessage,
   signAndValidateMessage,
-  derivePubKey
+  derivePubKey,
+  get_random_nonce
 }
