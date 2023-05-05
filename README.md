@@ -7,6 +7,8 @@ With Spock, a user generates a public/private ECDSA key pair that is securely st
 
 Spock can be easily integrated into any web application using its SDK, offering developers a simple way to offer secure and convenient passwordless authentication to their users. By eliminating the need for traditional passwords, Spock aims to provide a more user-friendly and secure login experience for both users and developers.
 
+**Edit: The extension points to a centralised database currently! Will shortly update it with it pointing to the Oracle!**
+
 Deliverables
 
 1. Spock browser extension: This would be a browser extension for popular web browsers like Chrome, Firefox, and Safari. The extension would provide users with a convenient and easy-to-use interface for generating and managing their ECDSA key pairs.
