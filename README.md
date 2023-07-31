@@ -1,5 +1,15 @@
 ## Project Summary
 
+Spock: Passwordless cryptographic signature login
+Spock is a browser extension and SDK that offers passwordless authentication using public/private ECDSA keys. This technology allows users to securely sign in to websites and applications without the need for a traditional username and password.
+
+With Spock, a user generates a public/private ECDSA key pair that is securely stored on their device. When they want to log in to a website or application that uses Spock, they simply sign a challenge with their private key, which is then verified by the server using the user’s public key.
+
+Spock can be easily integrated into any web application using its SDK, offering developers a simple way to offer secure and convenient passwordless authentication to their users. By eliminating the need for traditional passwords, Spock aims to provide a more user-friendly and secure login experience for both users and developers.
+
+**Edit: The extension points to a centralised database currently! Will shortly update it with it pointing to the Oracle!**
+
+
 ```mermaid
 sequenceDiagram
     participant User
@@ -22,15 +32,6 @@ sequenceDiagram
     User->>Website: Click logout
     Website->>Website: Erase user's session ID and request key
 ```
-
-Spock: Passwordless cryptographic signature login
-Spock is a browser extension and SDK that offers passwordless authentication using public/private ECDSA keys. This technology allows users to securely sign in to websites and applications without the need for a traditional username and password.
-
-With Spock, a user generates a public/private ECDSA key pair that is securely stored on their device. When they want to log in to a website or application that uses Spock, they simply sign a challenge with their private key, which is then verified by the server using the user’s public key.
-
-Spock can be easily integrated into any web application using its SDK, offering developers a simple way to offer secure and convenient passwordless authentication to their users. By eliminating the need for traditional passwords, Spock aims to provide a more user-friendly and secure login experience for both users and developers.
-
-**Edit: The extension points to a centralised database currently! Will shortly update it with it pointing to the Oracle!**
 
 Deliverables
 
