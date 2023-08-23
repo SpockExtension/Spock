@@ -1,3 +1,5 @@
+// while these values are live, they are dummy. You can use them if you want, they are here for the sake for convenience.
+
 {
     "type": "service_account",
     "project_id": "spock-98c83",
