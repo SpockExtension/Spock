@@ -67,8 +67,6 @@ Open the browser and load the appropriate development build. For example, if you
 
 You can start editing the popup by modifying `popup.tsx`. It should auto-update as you make changes. To add an options page, simply add a `options.tsx` file to the root of the project, with a react component default exported. Likewise to add a content page, add a `content.ts` file to the root of the project, importing some module and do some logic, then reload the extension on the browser.
 
-For further guidance, [visit Plasmo Documentation](https://docs.plasmo.com/)
-
 ## Making production build
 
 Run the following:
