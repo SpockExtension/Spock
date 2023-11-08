@@ -79,4 +79,4 @@ pnpm build
 npm run build
 ```
 
-This should create a production bundle for the extension, ready to be zipped and published to the stores.
+This should create a production bundle for the extension, and sideload it.
