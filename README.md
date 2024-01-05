@@ -7,28 +7,6 @@ Spock is a browser extension that offers a secure and passwordless authenticatio
 https://github.com/SpockExtension/Spock/assets/36011576/44e525b6-4c3a-4df4-a769-a68135184ae9
 
 
-```mermaid
-sequenceDiagram
-    participant User
-    participant Extension
-    participant Oracle
-    participant Website
-
-    User->>Extension: Download extension
-    User->>Extension: Generate keys, import keys, or import configuration file
-    Extension->>Extension: Store user's keys in internal memory
-    User->>Extension: Set default key
-    User->>Website: Sign message using Spock
-    Website->>Oracle: Request a random message (HMAC)
-    Oracle->>Oracle: Generate list of 20 randomly generated signatures every 10 seconds
-    Extension->>Oracle: Sign message using private key, username, and random string
-    Extension->>Website: Set spock_request_cookie as {username, signature}
-    Website->>Oracle: Validate signature using validate_signature(signature, username) request
-    Oracle->>Oracle: Run 20 iterations of messages for validation (username + current_nonce)
-    Oracle->>Website: If any signatures hold true, user is logged in
-    User->>Website: Click logout
-    Website->>Website: Erase user's session ID and request key
-```
 
 
 ## 1. Introduction
