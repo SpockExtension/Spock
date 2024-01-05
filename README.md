@@ -10,6 +10,10 @@ Spock can be easily integrated into any web application using its SDK, offering 
 **Edit: The extension points to a centralised database currently! Will shortly update it with it pointing to the Oracle!**
 
 
+
+https://github.com/SpockExtension/Spock/assets/36011576/44e525b6-4c3a-4df4-a769-a68135184ae9
+
+
 ```mermaid
 sequenceDiagram
     participant User
